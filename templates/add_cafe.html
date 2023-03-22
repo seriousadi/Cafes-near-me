@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+{% with  messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+{{ message }}
+{% endfor %}
+{% endif %}
+{% endwith %}
+<form action="" method="post">
+    {% for n in form %}
+    <label>{{n.name}}</label>
+    {{ n }}
+    <br>
+    {% endfor %}
+
+</form>
+{% include 'footer.html' %}
